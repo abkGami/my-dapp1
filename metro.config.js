@@ -17,13 +17,16 @@ config.resolver = {
   extraNodeModules: {
     ...config.resolver.extraNodeModules,
     crypto: require.resolve('expo-crypto'),
+    // crypto: require.resolve('react-native-crypto'),
     fs: path.resolve(__dirname, './src/shared/utils/fsPolyfill.js'),
     'text-encoding': require.resolve('text-encoding'),
     stream: require.resolve('stream-browserify'),
+    process: require.resolve('process'),
+    buffer: require.resolve('buffer'),
     // Add web streams API polyfill
     'web-streams-polyfill': require.resolve('web-streams-polyfill'),
     // Add events polyfill
-    'events': require.resolve('events'),
+    events: require.resolve('events'),
   },
 };
 
